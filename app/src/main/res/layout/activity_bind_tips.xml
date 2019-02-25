@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.BindTipsActivity">
+
+    <com.yaya.baby.view.TopView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:background="@color/red_ffe6f1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iv_bottom"
+        android:layout_below="@+id/topView"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_have_buy"
+                android:layout_width="@dimen/darcy_120_dp"
+                android:layout_height="@dimen/darcy_120_dp"
+                android:src="@mipmap/have_buy" />
+
+            <TextView
+                android:id="@+id/tv_bind_now"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_have_buy"
+                android:layout_marginTop="@dimen/darcy_2_dp"
+                android:text="已经购买了，立即绑定 >>"
+                android:textColor="@color/red_ff348c" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+           >
+
+            <ImageView
+                android:id="@+id/iv_no_buy"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/darcy_120_dp"
+                android:layout_height="@dimen/darcy_120_dp"
+                android:src="@mipmap/no_buy" />
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_no_buy"
+                android:layout_marginTop="@dimen/darcy_2_dp"
+                android:text="尚未购买，立即购买 >>"
+                android:textColor="@color/red_ff348c" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bind_bg" />
+
+</RelativeLayout>

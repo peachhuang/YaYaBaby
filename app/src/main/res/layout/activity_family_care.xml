@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/family_care_bg"
+    tools:context=".ui.activity.FamilyCareActivity">
+
+    <com.yaya.baby.view.TopView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/darcy_20_dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="@dimen/darcy_20_dp"
+            android:background="@drawable/rectangle_white">
+
+            <TextView
+                android:id="@+id/tv_care_text0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/darcy_20_dp"
+                android:text="邀请亲友绑定，第一时间收到包包信息"
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_care_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_care_text0"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/darcy_10_dp"
+                android:text="让爱一起行动 !"
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_invitation_weChat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/darcy_45_dp"
+                android:layout_below="@+id/tv_care_text1"
+                android:layout_marginStart="@dimen/darcy_20_dp"
+                android:layout_marginTop="@dimen/darcy_40_dp"
+                android:layout_marginEnd="@dimen/darcy_20_dp"
+                android:background="@drawable/button_selector"
+                android:text="微信邀请"
+                android:textColor="@color/white" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_break_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_invitation_weChat"
+                android:layout_marginTop="@dimen/darcy_40_dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/darcy_100_dp"
+                    android:layout_height="@dimen/darcy_1_dp"
+                    android:layout_gravity="center"
+                    android:background="@color/main_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/darcy_20_dp"
+                    android:layout_marginEnd="@dimen/darcy_20_dp"
+                    android:text="or"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="@dimen/darcy_100_dp"
+                    android:layout_height="@dimen/darcy_1_dp"
+                    android:layout_gravity="center"
+                    android:background="@color/main_color" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_scan_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_break_line"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/darcy_10_dp"
+                android:text="面对面扫码绑定"
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_QR_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_scan_code"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/darcy_10_dp"
+                android:layout_marginBottom="@dimen/darcy_10_dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

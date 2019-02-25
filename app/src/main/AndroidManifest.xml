@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yaya.baby">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- ble蓝牙所需要的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- ble蓝牙设备所需要的 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name=".BabyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/NoActionBarTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:theme">
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:theme="@style/BaseActivityTheme" />
+        <activity android:name=".ui.activity.MainActivity" />
+        <!-- 我的设备界面 -->
+        <activity
+            android:name=".ui.activity.MyFetalActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <!-- 家庭成员管理界面 -->
+        <activity
+            android:name=".ui.activity.FamilyManagerActivity"
+            android:theme="@style/BaseActivityTheme" />
+        <!-- 寻找胎心界面 -->
+        <activity
+            android:name=".ui.activity.SearchBabyHeartActivity"
+            android:theme="@style/BaseActivityTheme" />
+        <!-- 数胎动界面 -->
+        <activity android:name=".ui.activity.ManualFetalActivity" />
+        <!-- 我的设备界面 -->
+        <activity android:name=".ui.activity.MyEquipmentActivity" />
+        <!-- 用户详情界面 -->
+        <activity
+            android:name=".ui.activity.UserDataActivity"
+            android:theme="@style/BaseActivityTheme" />
+        <!-- 家庭成员详情界面 -->
+        <activity
+            android:name=".ui.activity.FamilyMemberActivity"
+            android:theme="@style/BaseActivityTheme" />
+        <!-- 蓝牙所需要的服务 -->
+        <service android:name="com.inuker.bluetooth.library.BluetoothService" />
+        <!-- 他的中心界面 -->
+        <activity android:name=".ui.activity.CenterActivity" />
+        <!-- 自动测胎动界面 -->
+        <activity
+            android:name=".ui.activity.AutoFetalActivity"
+            android:theme="@style/BaseActivityTheme" />
+        <!-- 绑定提示界面 -->
+        <activity
+            android:name=".ui.activity.BindTipsActivity"
+            android:theme="@style/BaseActivityTheme" />
+        <!-- 扫描二维码界面 -->
+        <activity
+            android:name="com.xys.libzxing.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseActivityTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- 亲友关怀的界面 -->
+        <activity
+            android:name=".ui.activity.FamilyCareActivity"
+            android:theme="@style/BaseActivityTheme" />
+        <!-- 启动页 -->
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@style/BaseActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.PlayActivity">
+
+
+        </activity>
+    </application>
+
+</manifest>

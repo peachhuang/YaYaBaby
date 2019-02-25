@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.SearchBabyHeartActivity">
+
+
+    <com.yaya.baby.view.TopView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="@dimen/darcy_240_dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_fetal_heart"
+                android:layout_width="@dimen/darcy_240_dp"
+                android:layout_height="@dimen/darcy_240_dp"
+                android:src="@mipmap/baby_heart" />
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_fetal_heart"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/darcy_20_dp"
+                android:text="请移动胎心贴，寻找胎心"
+                android:textColor="@color/main_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_fetal_suggest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_tips"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/darcy_10_dp"
+                android:text="根据您的孕期推荐的位置"
+                android:textColor="@color/gray_cccccc"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_find_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.yaya.baby.view.SpreadWaveView
+                    android:id="@+id/spreadWaveView"
+                    android:layout_width="@dimen/darcy_340_dp"
+                    android:layout_height="@dimen/darcy_340_dp" />
+
+                <com.yaya.baby.view.WaveView
+                    android:id="@+id/wave"
+                    android:layout_width="@dimen/darcy_200_dp"
+                    android:layout_height="@dimen/darcy_200_dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_white" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="140"
+                    android:textColor="@color/white"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_find_heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl"
+                android:layout_centerInParent="true"
+                android:text="已发现胎心，请勿移动胎心贴"
+                android:textColor="@color/main_color"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_now"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/darcy_20_dp"
+        android:text="5s后将自动进入实时胎心监测"
+        android:textColor="@color/brown_ccb793"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_now"
+        android:layout_width="@dimen/darcy_180_dp"
+        android:layout_height="@dimen/darcy_40_dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/darcy_20_dp"
+        android:background="@drawable/selector_fetal_now"
+        android:text="立即进入"
+        android:textColor="@color/main_color"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/btn_not_find"
+        android:layout_width="@dimen/darcy_180_dp"
+        android:layout_height="@dimen/darcy_40_dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/darcy_40_dp"
+        android:background="@drawable/rectangle_brown"
+        android:text="无法找到胎心怎么办?"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+</RelativeLayout>

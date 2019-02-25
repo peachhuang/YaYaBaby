@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PlayActivity">
+
+    <com.necer.calendar.EmuiCalendar
+        android:id="@+id/emuiCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bgCalendarColor="#ffffff"
+        app:bgChildColor="#F5f5f5"
+        app:holidayColor="#F29B38"
+        app:lunarHolidayTextColor="#F29B38"
+        app:selectCircleColor="#F29B38"
+        app:solarHolidayTextColor="#F29B38"
+        app:solarTermTextColor="#F29B38"
+        app:todaySolarTextColor="#F29B38">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_lunar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+
+                android:background="#f5f5f5"
+                android:textColor="#333333"
+                android:textSize="13sp" />
+
+        </android.support.v4.widget.NestedScrollView>
+    </com.necer.calendar.EmuiCalendar>
+
+</LinearLayout>

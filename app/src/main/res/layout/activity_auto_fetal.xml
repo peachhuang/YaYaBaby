@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AutoFetalActivity">
+
+    <LinearLayout
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/head_bg"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/darcy_20_dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="@dimen/darcy_40_dp"
+                android:layout_height="@dimen/darcy_40_dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="@dimen/darcy_12_dp"
+                    android:layout_height="@dimen/darcy_20_dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/back_normal" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="标题"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_right_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/darcy_10_dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="结束"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_heart_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/darcy_60_dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/darcy_30_dp"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/darcy_25_dp"
+                    android:layout_height="@dimen/darcy_20_dp"
+                    android:layout_gravity="center|bottom"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/heart_beat_number" />
+
+                <TextView
+                    android:id="@+id/tv_heart_beat"
+                    android:layout_width="@dimen/darcy_40_dp"
+                    android:layout_height="@dimen/darcy_30_dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_des"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/darcy_60_dp"
+        android:layout_below="@+id/topView">
+
+        <View
+            android:id="@+id/view_rectangle_green"
+            android:layout_width="@dimen/darcy_10_dp"
+            android:layout_height="@dimen/darcy_10_dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/darcy_20_dp"
+            android:background="@color/green_47ba5c" />
+
+        <TextView
+            android:id="@+id/tv_heart_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/darcy_6_dp"
+            android:layout_toEndOf="@+id/view_rectangle_green"
+            android:text="正常范围"
+            android:textColor="@color/gray_888888"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_circle_green"
+            android:layout_width="@dimen/darcy_10_dp"
+            android:layout_height="@dimen/darcy_10_dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/darcy_20_dp"
+            android:layout_toEndOf="@+id/tv_heart_range"
+            android:background="@drawable/circle_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/darcy_6_dp"
+            android:layout_toEndOf="@+id/view_circle_green"
+            android:text="胎动"
+            android:textColor="@color/gray_888888"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/darcy_20_dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用时:"
+                android:textColor="@color/main_color"
+                android:textSize="14sp" />
+
+            <Chronometer
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/darcy_6_dp"
+                android:format="00:00:00"
+                android:gravity="center"
+                android:textColor="@color/main_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/v_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/darcy_250_dp"
+        android:layout_below="@+id/rl_des" />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="@dimen/darcy_50_dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/darcy_10_dp"
+        android:background="@drawable/rectangle_brown_1ab693"
+        android:gravity="center"
+        android:text="@string/heart_tips_string"
+        android:textColor="@color/brown_ccb793" />
+</RelativeLayout>

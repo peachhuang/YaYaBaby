@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/main_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ll_head"
+        android:background="@color/main_color">
+
+        <ImageView
+            android:id="@+id/iv_left_image"
+            android:layout_width="@dimen/darcy_20_dp"
+            android:layout_height="@dimen/darcy_20_dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/darcy_10_dp"
+            android:src="@drawable/message_selector" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="首页"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_right_image"
+            android:layout_width="@dimen/darcy_20_dp"
+            android:layout_height="@dimen/darcy_20_dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/darcy_10_dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/scan_selector" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_bar"
+        android:layout_marginBottom="50dp"
+        android:background="#f3f3f3" />
+
+    <View
+        android:layout_above="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/darcy_1_dp"
+        android:background="@color/gray_f3f3f3" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/bottom" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yaya.baby.view.CustomVideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/darcy_90_dp"
+            android:layout_height="@dimen/darcy_90_dp"
+            android:layout_above="@+id/ll_login"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/darcy_40_dp"
+            android:src="@mipmap/login_logo" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/darcy_40_dp"
+            android:layout_marginEnd="@dimen/darcy_40_dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_f3f3f3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/darcy_18_dp"
+                    android:layout_height="@dimen/darcy_20_dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/phone_number" />
+
+                <EditText
+                    android:id="@+id/et_input_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_input_phone_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:paddingLeft="@dimen/darcy_10_dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_cfcfcf"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_f3f3f3" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_code"
+                    android:layout_width="@dimen/darcy_18_dp"
+                    android:layout_height="@dimen/darcy_20_dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/code" />
+
+                <EditText
+                    android:id="@+id/et_input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/iv_code"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_input_code"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:paddingLeft="@dimen/darcy_10_dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_cfcfcf"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/darcy_30_dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/darcy_10_dp"
+                    android:layout_toStartOf="@+id/tv_code"
+                    android:background="@color/gray_f3f3f3" />
+
+                <TextView
+                    android:id="@+id/tv_code"
+                    android:layout_width="@dimen/darcy_100_dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/darcy_10_dp"
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_f3f3f3" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/ll_login"
+            android:layout_margin="@dimen/darcy_40_dp"
+            android:layout_marginTop="@dimen/darcy_40_dp"
+            android:background="@drawable/button_selector"
+            android:text="下一步"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</FrameLayout>
